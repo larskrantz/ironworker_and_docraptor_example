@@ -1,0 +1,3 @@
+#! /bin/bash
+bundle update -j8
+iron_worker upload ironworker_and_docraptor_example --worker-config config.json

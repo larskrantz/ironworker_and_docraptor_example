@@ -1,0 +1,45 @@
+#!/usr/bin/env ruby
+require 'iron_worker_ng'
+require 'doc_raptor'
+require 'json'
+require 'optparse'
+
+options = {}
+OptionParser.new do |opts|
+  opts.banner = "Usage: enqueue_pdf [options]"
+
+  opts.on("-e", "--to TO", "Send to email") { |to| options[:to] = to }
+  opts.on("-n", "--name NAME", "Send to name") { |name| options[:name] = name }
+  opts.on_tail("-h", "--help", "Show this message") { puts opts; exit; }
+
+end.parse!
+
+unless options[:to]
+	puts "Please provide to email. Try --help."
+	exit
+end
+
+json_config = File.read 'config.json'
+config = JSON.parse json_config
+
+doc_raptor_token = config['DOCRAPTOR_TOKEN']
+DocRaptor.api_key doc_raptor_token
+
+test_html = "<html><head><title>Test</title></head><body>Hello World</body></html>"
+
+doc_raptor_args = {
+	name: "Test doc",
+	document_type: :pdf,
+	test: true,
+	document_content: test_html,
+	# set async to true, will return with an id that we send to the worker
+  async: true
+}
+
+response = DocRaptor.create(doc_raptor_args)
+status_id = response['status_id']
+
+payload = { send_to_mail: options[:to], title: 'Test document', fullname: options.fetch(:name, "Jane Doe"), status_id: status_id }
+
+client = IronWorkerNG::Client.new
+client.tasks.create "ironworker_and_docraptor_example", payload

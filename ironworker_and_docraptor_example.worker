@@ -1,0 +1,9 @@
+runtime "ruby"
+stack "ruby-2.1"
+exec "entrypoint.rb"
+gemfile 'Gemfile'
+file 'mailer.rb'
+file 'data_processor.rb'
+file 'template.html.erb'
+file 'template.txt.erb'
+file 'mailer.rb'

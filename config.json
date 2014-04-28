@@ -1,0 +1,8 @@
+{
+"DOCRAPTOR_TOKEN":"",
+"MAIL_USER":"your.name@gmail.com",
+"MAIL_PASSWORD":"",
+"MAIL_HOST":"smtp.gmail.com",
+"MAIL_PORT":587,
+"MAIL_SENDER": "Your Name <your.name@gmail.com>"
+}
