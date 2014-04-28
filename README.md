@@ -20,10 +20,10 @@ An example how to combine [DocRaptor][1]'s async feature and [IronWorker][2].
 1. Create a free account with [Iron.io][3]
 2. Enter your [Hud](https://hud.iron.io/dashboard) and create a project
 3. Get your credentials by clicking on the litte key
-4. Edit [iron.json](../blob/master/iron.json) and put in your credentials
+4. Edit [iron.json](../master/iron.json) and put in your credentials
 5. Signup for an api-key at [DocRaptor][https://docraptor.com/signup]
-6. Put your api-key in [config.json - DOCRAPTOR_TOKEN](../blob/master/config.json)
-7. Put your mail credentials in [config.json](../blob/master/config.json)
+6. Put your api-key in [config.json - DOCRAPTOR_TOKEN](../master/config.json)
+7. Put your mail credentials in [config.json](../master/config.json)
 8. `./deploy`
 9. `./enqueue_pdf --to you@foo.com  --name 'The Architect'`
 
