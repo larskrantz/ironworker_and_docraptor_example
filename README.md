@@ -22,7 +22,7 @@ An example how to combine [DocRaptor][1]'s async feature and [IronWorker][2].
 3. Enter your [Hud](https://hud.iron.io/dashboard) and create a project
 4. Get your credentials by clicking on the litte key
 5. Edit [iron.json](../master/iron.json) and put in your credentials
-6. Signup for an api-key at [DocRaptor][https://docraptor.com/signup]
+6. Signup for an api-key at [DocRaptor](https://docraptor.com/signup)
 7. Put your api-key in [config.json - DOCRAPTOR_TOKEN](../master/config.json)
 8. Put your mail credentials in [config.json](../master/config.json)
 9. `./deploy`
