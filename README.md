@@ -46,7 +46,9 @@ end
 Combining [IronMQ](http://www.iron.io/mq) with [IronWorker][2] using [push queues](http://dev.iron.io/mq/reference/push_queues/) and [webhooks](http://dev.iron.io/worker/webhooks/) is a perfect combo for this scenario.
 
 ### About Upptec
-Upptec provides valuation-as-a-service to the largest insurance companies in Sweden.
+Upptec Assure is a software-as-a-service for valuation of everything that exists in a household - home electronics, furniture, clothes etc. Our customers are primarily insurance companies and we make between 150000 and 200000 valuations per year.
+Millions of calculations creates an unbiased basis for a fair valuation. The service enables quicker handling, increases efficiency and releases time for our customers. 
+
 
 [1]: https://docraptor.com
 [2]: http://www.iron.io/worker
