@@ -5,11 +5,11 @@ An example how to combine [DocRaptor][1]'s async feature and [IronWorker][2].
 
 ## Goal
 1. Send html to [DocRaptor][1] using the [asynchronous job feature](https://docraptor.com/documentation#api_async).
-2. In return we get a `status_id`
-3. Send status_id, name, email and title of document to an [IronWorker][2] worker
-4. Pull [DocRaptor][1] with status_id until document is ready for download
+2. In return, we get a `status_id`
+3. Send `status_id`, receiver's `name`, `email` and `title` of document to an [IronWorker][2] worker
+4. The worker polls [DocRaptor][1] with `status_id` until document is ready for download
 5. Download pdf from [DocRaptor][1]
-6. Create mail, attach pdf and send
+6. Create a nice email, attach pdf and send
 
 ## Prerequisites
 * An account and project with [Iron.io][3]
